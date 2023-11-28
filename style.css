@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Setting Basic properties */
+body {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: url(img5.jpg);
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+label {
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -2px 2px 2px white;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    color: white;
+    border: 5px solid white;
+}
+
+
+/* Title box */
+.title {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 900px;
+    background: white;
+    bottom: 0;
+    left: 25px;
+    top: 60px;
+}
+
+
+/* User's info inputs */
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-details {
+
+    padding-left: 170px;
+    padding-top: 2px;
+    font-size: 18px;
+}
+
+.details1 {
+    padding-right: 120px;
+}
+
+.details2 {
+    padding-right: 100px;
+}
+
+.details3 {
+    padding-right: 47px;
+}
+
+.details4 {
+    padding-right: 105px;
+}
+
+.info .user-details input {
+    height: 45px;
+    width: 50%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+/* Hostel Selection */
+.hostel {
+    font-size: 18px;
+    padding-left: 170px;
+}
+
+.hostel select {
+    height: 28px;
+}
+
+
+/* Choice Selection */
+.clothes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    border: 2px solid white;
+    height: 670px;
+    width: 48%;
+    padding: 10px 10px 0px 10px;
+}
+
+.box-img {
+    height: 280px;
+    width: 350x;
+    background-size: cover;
+}
+
+.size {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.preference {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.preference label {
+    font-size: 17px;
+}
+
+.preference input {
+    height: 14px;
+    width: 14px;
+}
+
+.box-img1 {
+    height: 180px;
+    width: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Checkbox for T&C */
+.tandc {
+    font-size: 25px;
+    color: blue;
+}
+
+.tandc input {
+    height: 25px;
+    width: 25px;
+}
+
+.tandc_points {
+    font-size: 16px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: white;
+}
+
+
+/* Buttons */
+.button {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button input {
+    width: 25%;
+    font-size: 30px;
+    color: rgb(209, 209, 209);
+    background: rgba(63, 114, 76, 0.7);
+    cursor: pointer;
+    border: 2px solid white;
+    transition: 1ms ease;
+}
+
+.button input:hover {
+    background: rgba(56, 204, 93, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+
+/* Error Input */
+form input.error,
+form select.error {
+    border-color: #f91919;
+    background: #f9f0f1;
+}
+
+form small {
+    font-size: 22px;
+    margin-top: 5px;
+    display: block;
+    color: red;
+    font-weight: bold;
+
+}
+
+
+/* Making form Responsive */
+@media only screen and (max-width:1000px) {
+    
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .user-details {
+        max-width: 100%;
+    }
+
+    .clothes {
+        display: flex;
+        flex-direction: column;
+        width: 1000px;
+        margin-left: 50px;
+    }
+    .title::before{
+        display: none;
+    }
+    .user-details{
+        padding-left: 0px;
+    }
+    .title{
+        font-size: 100%;
+    }
+}
+@media only screen and (max-width:600px){
+    
+    .box {
+        height: 300px;
+        width: 300px;
+
+
+    }
+    .box-img{
+        height:100px ;
+        width: 250px;
+    }
+    .box-img1{
+        display: none;
+    }
+    .tandc{
+        font-size: 15px;
+    }
+    .tandc_points{
+        font-size: 10px;
+    }
+    .info .user-details input{
+        font-size: 14px;
+        height: 20px;
+        width: 190px;
+    }
+}
