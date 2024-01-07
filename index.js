@@ -28,7 +28,7 @@ const handleFormData = (e) => {
   // Regular expression pattern
   const fullnamePattern = /^[A-Za-z ]{5,50}$/;
   const emailPattern = /^[A-Za-z\._\-0-9]*[@]pilani\.bits-pilani\.ac\.in$/;
-  const bitsIdPattern = /^[A-Z,0-9]{13,15}$/;
+  const bitsIdPattern = /\d{4}(([A-B]\d{1,})?[A-B]\d{1,})?(AA)?(AB)?PS\d{4}P/;
   const phone1Pattern = /([+][9][1][ ])?\d{10}/;
 
   // Clearing previous error messages
